@@ -1,0 +1,268 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: -0.35px;
+}
+
+.sidebar {
+    background-color: rgba(4, 4, 4);
+    padding: 24px 24px 0 24px;
+    position: fixed;
+    height: 100%;
+    width: 230px;
+}
+
+.sidebar .brand {
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: left;
+}
+
+.brand img{
+    width: 34px;
+}
+
+.sidebar .menu .menuItem {
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.sidebar .menu .menuPlus .menuItem:not(:first-child) {
+    margin-top: 5px;
+}
+
+.sidebar .menu .menuItem a {
+    text-decoration: none;
+    color: #B3B3B3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    transition: all 350ms;
+}
+
+.bi {
+    opacity: 0.7;
+    transition: 350ms;
+}
+
+.bi:hover {
+    opacity: 1;
+}
+
+.sidebar .menu .menuItem:active a,
+.sidebar .menu .menuItem:hover a {
+    color: #fff;
+}
+
+.sidebar .menu .menuItem:active::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 8px;
+    left: -16px;
+    right: -16px;
+    background: rgb(40, 40, 40);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.menuItemText {
+    font-size: 0.88rem;
+    font-weight: 700px;
+    margin-left: 15px;
+}
+
+.sidebarHeader {
+    margin-top: 1.5rem;
+    margin-bottom: 1.3rem;
+    font-size: 0.68rem ;
+    letter-spacing: 1.5px;
+    color: #B3B3B3;
+}
+
+.sidebar .seperator {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #303030;
+    margin-top: 16px;
+}
+
+.sidebar .menuItemText a{
+    font-weight: 400;
+    margin-left: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar .menuItem a {
+    cursor : default;
+}
+
+
+main {
+    min-height: 100vh;
+    background: dodgerblue;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 230px;
+    right: 0;
+    height: 80px;
+    background-color: rgb(18, 18, 18) ;
+}
+
+.black {
+    color: black;
+}
+
+
+.sidebar svg {
+    margin-right: 10px;
+}
+
+.headbtn {
+    background: rgb(0, 0, 0);
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: default;
+    margin: 20px 0 0 0;
+}
+
+.prev {
+    margin-left: 10px;
+}
+
+.sidebar .basicIcon {
+    margin-right: -6px;
+}
+
+.bottomBar {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        height: 90px;
+        background-color: rgb(0, 0, 0);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-top: rgba(255, 255, 255, 0.701) solid 0.1px;
+}
+
+.progress-container{
+    background: rgba(255, 255, 255, 0.112);
+    width: 150%;
+    height: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px -45px;
+}
+
+.progress-bar {
+    background-color: rgba(255, 255, 255, 0.851);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+
+.manipulationbtns{
+    margin-bottom: 20px;
+}
+
+.playBtns {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.bottomBar .music-container h4 {
+    font-size: 0.6rem;
+    color: #B3B3B3;
+
+}
+
+.bottomBar .music-container {
+    position: fixed;
+    left: 30px;
+}
+
+.bottomBar .music-container .music-info {
+    display: flex;
+    margin-left: 20px;
+}
+
+.bottomBar .music-container .music-info svg{
+    margin-left: 10px;
+}
+
+
+
+
+.artist {
+    font-size: 0.5rem;
+    color: #B3B3B3;
+    margin-left:35px;
+}
+
+#cover {
+    position: fixed;
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 20%;
+}
+
+.volume-container  {
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 45px;
+    bottom: 55px;
+}
+
+.volume-container #volume-control {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(128, 128, 128, 0.427);
+    outline: none;
+    border-radius: 5px;
+    height: 3px;
+}
+.volume-container #volume-control::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #989898;
+    border-radius: 50%;
+}
+
+.volume-container #volume-control:hover {
+    background: #30a530;
+    transition: 1s linear;
+}
+
+.hidden {
+    display: none;
+}
